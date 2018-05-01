@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>前端总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="目录结构123456789101112131415161718192021222324252627282930313233343536--dist 默认的 build 构建产品输出目录--.cache 打包缓存--node_modules 第三方库，组件--src    --api  各个模块的网络请求接口定义    --assets js,css,img 等资源目录    --compoents">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端总结">
+<meta property="og:url" content="http://yoursite.com/2018/05/01/前端总结/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目录结构123456789101112131415161718192021222324252627282930313233343536--dist 默认的 build 构建产品输出目录--.cache 打包缓存--node_modules 第三方库，组件--src    --api  各个模块的网络请求接口定义    --assets js,css,img 等资源目录    --compoents">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-01T05:04:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="前端总结">
+<meta name="twitter:description" content="目录结构123456789101112131415161718192021222324252627282930313233343536--dist 默认的 build 构建产品输出目录--.cache 打包缓存--node_modules 第三方库，组件--src    --api  各个模块的网络请求接口定义    --assets js,css,img 等资源目录    --compoents">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-前端总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-前端总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/01/前端总结/" class="article-date">
   <time datetime="2018-05-01T03:44:26.000Z" itemprop="datePublished">2018-05-01</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/前端总结/">前端总结</a>
+    <h1 class="article-title" itemprop="name">
+      前端总结
     </h1>
   
 
@@ -115,51 +117,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-后端总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/01/后端总结/" class="article-date">
-  <time datetime="2018-05-01T03:00:57.000Z" itemprop="datePublished">2018-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/后端总结/">后端总结</a>
-    </h1>
+    <a href="/2018/05/01/后端总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">后端总结</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-目录结构"><a href="#1-目录结构" class="headerlink" title="1. 目录结构"></a>1. 目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">config</span><br><span class="line">    --config.go 配置文件,定义结构并初始化</span><br><span class="line"></span><br><span class="line">controllers</span><br><span class="line">    --controller.go 做全局控制器方法和设置</span><br><span class="line">    --home</span><br><span class="line">        --hello.go home下的控制器,在里面写方法</span><br><span class="line"></span><br><span class="line">logger</span><br><span class="line">    --logger.go 日志库,打印日志,有5个方法 Debug，Info，Warn, Error ,Fatal  日志级别由低到高</span><br><span class="line"></span><br><span class="line">logs</span><br><span class="line">    --requestlog 请求日志</span><br><span class="line">    --sqllog 数据库日志</span><br><span class="line">    </span><br><span class="line">middleware</span><br><span class="line">    --jwt</span><br><span class="line">        --jwt.go 定义中间件对象结构,新建中间件对象实例以及一些必要的函数</span><br><span class="line">    --log</span><br><span class="line">        --log.go 读写日志</span><br><span class="line">        </span><br><span class="line">models</span><br><span class="line">    --user.go 用户数据模型，定义表结构以及表名</span><br><span class="line"></span><br><span class="line">resources</span><br><span class="line">    --asset</span><br><span class="line">    --uploads   资源文件，存在图片视频等资源</span><br><span class="line"></span><br><span class="line">route</span><br><span class="line">    --route.go 路由配置文件</span><br><span class="line">    </span><br><span class="line">utils</span><br><span class="line">    --utils.go 公共函数库</span><br><span class="line">    </span><br><span class="line">config.json 配置数据库信息，服务监听端口等</span><br><span class="line"></span><br><span class="line">main.go 入口文件</span><br></pre></td></tr></table></figure>
-<h3 id="2-中间件"><a href="#2-中间件" class="headerlink" title="2.中间件"></a>2.中间件</h3><p>当我们谈论Iris中的中间件时，我们正在讨论在HTTP请求生命周期中的主要处理程序代码之前和/或之后运行代码。例如，日志记录中间件可能会将传入的请求细节写入日志，然后调用处理程序代码，然后编写有关日志响应的详细信息。关于中间件的一件很酷的事情是这些单元非常灵活且可重用。中间件只是一个Handler形式func(ctx iris.Context)，中间件在以前的中间件调用时正在执行ctx.Next()，这可以用于身份验证，即：如果登录，则会ctx.Next()引发错误响应。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">定义中间件对象结构</span><br><span class="line">type JwtMiddleware struct &#123;</span><br><span class="line">	JwtConfig Config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">新建中间件对象实例</span><br><span class="line">func New(cfg ...Config) *JwtMiddleware </span><br><span class="line"></span><br><span class="line">从头部获取Token</span><br><span class="line">authHeader := ctx.GetHeader(&quot;Authorization&quot;)</span><br><span class="line"></span><br><span class="line">获取中间件处理后在context中存储的东西如uid</span><br><span class="line">jwtMapClaims, ok := ctx.Values().Get(m.JwtConfig.ContextKey).(jwt.MapClaims)</span><br><span class="line"></span><br><span class="line">验证token</span><br><span class="line">func (m *JwtMiddleware) VerifyToken(ctx iris.Context) error &#123;</span><br><span class="line">	logger.Log(&quot;---认证JWT Token&quot;)</span><br><span class="line">	var (</span><br><span class="line">		TokenInvalid error = errors.New(&quot;不是一个有效的Token&quot;)</span><br><span class="line">	)</span><br><span class="line"></span><br><span class="line">	tokenString, err := m.JwtConfig.Extractor(ctx)</span><br><span class="line">	if err != nil &#123;</span><br><span class="line">		return err</span><br><span class="line">	&#125;</span><br><span class="line">	//logger.Log(&quot;下面开始认证JWT&quot;)</span><br><span class="line"></span><br><span class="line">	token, err := jwt.Parse(tokenString, m.JwtConfig.ValidationkeyGetter)</span><br><span class="line">	if err == nil &#123;</span><br><span class="line">		/* logger.Log(&quot;解析Token: &quot;, token) */</span><br><span class="line">		if claims, ok := token.Claims.(jwt.MapClaims); ok &#123;</span><br><span class="line">			mapClaims_err := claims.Valid()</span><br><span class="line">			if mapClaims_err == nil &#123;</span><br><span class="line">				ctx.Values().Set(m.JwtConfig.ContextKey, claims)</span><br><span class="line">				//logger.Log(&quot;解析成功&quot;)</span><br><span class="line">				return nil</span><br><span class="line">			&#125;</span><br><span class="line">			return mapClaims_err</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//logger.Log(&quot;解析错误哦&quot;)</span><br><span class="line">	return TokenInvalid</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在路由里面</span><br><span class="line">//jwt中间件对象,生成jwt中间件对象  传递jwtmiddleware.Config&#123;&#125;参数，提供一个获取secret的函数 和一个加密算法名</span><br><span class="line">	segJWTMiddleware := jwtmiddleware.New(jwtmiddleware.Config&#123;</span><br><span class="line">		ValidationkeyGetter: func(token *jwt.Token) (interface&#123;&#125;, error) &#123;</span><br><span class="line">			return []byte(config.JWTConfig.Secret), nil</span><br><span class="line">		&#125;,</span><br><span class="line">		SigningMethod: jwt.SigningMethodHS256,</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	//全局存储中间件到model中,方便之后要调用</span><br><span class="line">	model.JWTMiddleware = segJWTMiddleware</span><br><span class="line"></span><br><span class="line">	//能放到路由里面的中间件是一个函数，segJWTMiddleware.Serve 正是一个处理的主函数，所以这里获取中间件</span><br><span class="line">	//理解中间件对象和中间件</span><br><span class="line">	//中间件对象 存了一些中间件需要的配置等等以及包含中间件</span><br><span class="line">	//中间件是一个函数</span><br><span class="line">	segJWTMiddlewareFunc := segJWTMiddleware.Serve</span><br></pre></td></tr></table></figure>
-<h3 id="3-models"><a href="#3-models" class="headerlink" title="3.models"></a>3.models</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">定义数据表 注意大小写 Go 中结构字段要大写，数据库字段要小写</span><br><span class="line">type Admin struct &#123;</span><br><span class="line">	Id       int64  `xorm:&quot;notnull autoincr &apos;id&apos;&quot;`</span><br><span class="line">	Uid      int64  `xorm:&quot;index pk notnull &apos;uid&apos;&quot;`</span><br><span class="line">	Username string `xorm:&quot; notnull unique &apos;username&apos;&quot;`</span><br><span class="line">	Password string `xorm:&quot;&apos;password&apos;&quot;`</span><br><span class="line">	Salt     string `xorm:&quot;&apos;salt&apos;&quot;`</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">定义表名</span><br><span class="line">func (admin Admin) TableName() string &#123;</span><br><span class="line">	return &quot;seg_admin&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">在 main.go 里面和数据库表结构同步</span><br><span class="line">engine.Sync2(new(model.Admin))</span><br><span class="line"></span><br><span class="line">xorm 数据库操作</span><br><span class="line"></span><br><span class="line">查询单条数据 Get</span><br><span class="line">partid, err := ctx.URLParamInt(&quot;partid&quot;)//读取 url 参数</span><br><span class="line">part := new(model.Part)</span><br><span class="line">	if err ==nil &#123;</span><br><span class="line">		has,err := model.DBEngine.Where(&quot;id=?&quot;,partid).Get(part)</span><br><span class="line">		if err == nil &#123;</span><br><span class="line">			if has&#123;</span><br><span class="line">				ctr.SendSuccessJSON(part, ctx)</span><br><span class="line">				return</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查询多条数据 Find</span><br><span class="line">	chapter := make([]model.Chapter,0)</span><br><span class="line">	err := model.DBEngine.Where(&quot;course_id=?&quot;,courseid).Find(&amp;chapter)</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">多表查询 </span><br><span class="line">定义结构：</span><br><span class="line">type NewArticleInfo struct &#123;</span><br><span class="line">	model.Article `xorm:&quot;extends&quot;` </span><br><span class="line">	Icon          string</span><br><span class="line">	Nickname      string</span><br><span class="line">&#125;</span><br><span class="line">方法一：join</span><br><span class="line">err := model.DBEngine.Join(&quot;inner&quot;, &quot;seg_user&quot;, &quot;seg_user.uid =  seg_article.author_uid&quot;).OrderBy(&quot;seg_article.article_content&quot;).Limit(pnum, p).Find(&amp;info)</span><br><span class="line"></span><br><span class="line">方法二：原生 sql</span><br><span class="line">err := model.DBEngine.Sql(&quot;select seg_article.* ,seg_user.* from seg_article,seg_user where seg_article.author_uid = seg_user.uid order by seg_article.create_time desc&quot;).Find(&amp;allInfo)</span><br><span class="line"></span><br><span class="line">插入数据</span><br><span class="line">err := ctx.ReadJSON(&amp;input)//读取post</span><br><span class="line">_, err := model.DBEngine.Insert(article)</span><br><span class="line"></span><br><span class="line">更新数据</span><br><span class="line">_, err = model.DBEngine.Id(id).Update(article)</span><br><span class="line"></span><br><span class="line">删除数据</span><br><span class="line">_, err := model.DBEngine.Where(&quot;article_id=?&quot;, id).Delete(reply)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/01/后端总结/" data-id="cjgn4q0yh0001kwoyf1gnt1kb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>前端总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前端总结 Vue Vue生命周期例子：123456var app = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;          message : &quot;xuxiao is boy&quot;       &amp;#125;,    &amp;#125;)      共分为八个阶段beforeCreate（实例刚被创建）el 和 data 并未初始化created（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端总结">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/学习交流平台前端总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前端总结 Vue Vue生命周期例子：123456var app = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;          message : &quot;xuxiao is boy&quot;       &amp;#125;,    &amp;#125;)      共分为八个阶段beforeCreate（实例刚被创建）el 和 data 并未初始化created（">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-26T12:45:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端总结">
+<meta name="twitter:description" content="前端总结 Vue Vue生命周期例子：123456var app = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;          message : &quot;xuxiao is boy&quot;       &amp;#125;,    &amp;#125;)      共分为八个阶段beforeCreate（实例刚被创建）el 和 data 并未初始化created（">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-学习交流平台前端总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/25/学习交流平台前端总结/" class="article-date">
+  <time datetime="2018-04-25T06:24:34.000Z" itemprop="datePublished">2018-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端总结"><a href="#前端总结" class="headerlink" title="前端总结"></a>前端总结</h1><hr>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
+<li><strong>Vue生命周期</strong><br><strong>例子：</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">      el: <span class="string">'#app'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">          message : <span class="string">"xuxiao is boy"</span> </span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<p> <strong>共分为八个阶段</strong><br>beforeCreate（实例刚被创建）el 和 data 并未初始化<br>created（实例创建完成，属性已绑定，但DOM 还未生成，$el属性还不存在）<br>beforeMount(模板编译/载入前)完成了 el 和 data 初始化 。此时还没有生成 html到页面上去<br>mounted（模板编译/载入后）完成挂载，也就是模板中的 html 渲染到 html 页面中，此时一般可以做一些 ajax 操作<br>beforeUpdate（数据更新时调用）<br>updated（更新完成后的钩子）<br>beforeDestroy（实例销毁之前调用。在这一步，实例仍然完全可用）<br>destroyed（Vue 实例销毁后调用）</p>
+<ul>
+<li><strong>Vue路由</strong></li>
+</ul>
+<blockquote>
+<p>抽取共用的部分，比如导航栏，做主路由。之后再分子路由，如在论坛页面，将导航栏和用户信息抽取出来做公共部分放在 bbs/index 下。子路由分为 home、newart、hotart等，实现点击切换子路由。<br>动态路由：如 article/：id，帖子具体页面，根据url 的 id 不同，得到不同数据。</p>
+</blockquote>
+<ul>
+<li><strong>Vuex</strong></li>
+</ul>
+<blockquote>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+</blockquote>
+<pre><code>Getter：Vuex 允许我们在 store 中定义“getter”（可以认为是 store 的计算属性）。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。
+Mutation：更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。
+Action类似于 mutation，不同在于：Action 提交的是 mutation，而不是直接变更状态。Action 可以包含任意异步操作。
+</code></pre><ul>
+<li><p><strong>基于 Token的身份验证–JWT</strong></p>
+<blockquote>
+<p>JWT就是一个字符串，经过加密处理与校验处理的字符串，形式为：A.B.C<br>A由JWT头部信息header加密得到<br>B由JWT用到的身份验证信息json数据加密得到<br>C由A和B加密得到，是校验部分<br>A.B.C就是生成的 token 了<br>token应用流程？<br>初次登录：用户初次登录，输入用户名密码<br>密码验证：服务器从数据库取出用户名和密码进行验证<br>生成JWT：服务器端验证通过，根据从数据库返回的信息，以及预设规则，生成JWT<br>返还JWT：服务器的HTTP RESPONSE中将JWT返还<br>带JWT的请求：以后客户端发起请求，HTTP REQUEST HEADER中的Authorizatio字段都要有值，为JWT</p>
+</blockquote>
+</li>
+<li><p><strong>路由拦截</strong></p>
+<blockquote>
+<p> 第一套 :<br>……第一层 meta是否控制路由需要验证<br>……第二层 store中token是否存在<br>……第三层 localstore中token是否存在，存在则进行token登录，成功将获得新token 存store<br>第二套 :<br>…..第一层 meta是否控制路由需要验证<br>…..第二层 localstore中token是否存在</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给路由添加上 meta 属性，当路由跳转时，进行拦截</span></span><br><span class="line"><span class="keyword">if</span> (to.matched.some(<span class="function"><span class="params">record</span> =&gt;</span> record.meta.requiresAuth)) &#123;</span><br><span class="line">    <span class="keyword">var</span> token = utils.getStore(<span class="string">"JWT_TOKEN"</span>)<span class="comment">//获取 localstore 中的 token</span></span><br><span class="line">      <span class="keyword">if</span>(!token)<span class="comment">//如果 token 为空，弹出登录框，跳回首页</span></span><br><span class="line">      &#123;</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          $(<span class="string">'#myModal1'</span>).modal(<span class="string">'show'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">        next(&#123; <span class="attr">path</span>: <span class="string">'/index/home'</span> &#125;) </span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;<span class="comment">//如果 token 不为空，再判断 store 中的用户信息是否为空。有可能因为刷新页面导致清空 store，因此用户信息为空则要再次进行验证</span></span><br><span class="line">        <span class="keyword">if</span>(store.state.userInfo.nickname)&#123; <span class="comment">//用户信息不为空，直接跳转</span></span><br><span class="line">          next()</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;   <span class="comment">//用户信息为空，调用 action 进行验证</span></span><br><span class="line">          store.dispatch(<span class="string">'setUserMsgAct1'</span>)  </span><br><span class="line">          .then(<span class="function"><span class="params">rep</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(rep.data.token)&#123;<span class="comment">//返回新的 token 存进 localstore 中之后跳转</span></span><br><span class="line">              utils.setStore(<span class="string">"JWT_TOKEN"</span>,rep.data.token)</span><br><span class="line">              next()</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="comment">//没有新的 token 返回，则除去localstore 中的 token，并且清空userinfo 和 token，弹出登录框，跳回首页</span></span><br><span class="line">                utils.removeStore(<span class="string">"JWT_TOKEN"</span>)</span><br><span class="line">              <span class="keyword">var</span> data = &#123; <span class="attr">userInfo</span>: &#123;&#125;, <span class="attr">token</span>: <span class="string">''</span> &#125;</span><br><span class="line">              store.commit(<span class="string">'SET_USERMSG'</span>,data)</span><br><span class="line">              $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $(<span class="string">'#myModal1'</span>).modal(<span class="string">'show'</span>)</span><br><span class="line">              &#125;)</span><br><span class="line">              next(&#123; <span class="attr">path</span>: <span class="string">'/index/home'</span> &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">          .catch(<span class="function"><span class="params">err</span> =&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(err)</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;  </span><br><span class="line">      &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next() <span class="comment">// 确保一定要调用 next()</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/25/学习交流平台前端总结/" data-id="cjggivsqp000252oy2mqtfwc5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/25/前端总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前端总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/25/前端总结/">前端总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/25/学习交流平台前端总结/">前端总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
