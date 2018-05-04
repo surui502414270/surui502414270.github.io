@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>redis常用命令 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.启动 redis  1redis-server /usr/local/etc/redis.conf 2.新建窗口1redis-cli 3.在远程服务上执行命令1$redis-cli -h 127.0.0.1 -p 6379 -a &amp;quot;mypass&amp;quot; 4.Redis 字符串(String)12345设置指定 key 的值SET runoobkey redis获取指定 key 的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis常用命令">
+<meta property="og:url" content="http://yoursite.com/2018/05/04/redis常用命令/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.启动 redis  1redis-server /usr/local/etc/redis.conf 2.新建窗口1redis-cli 3.在远程服务上执行命令1$redis-cli -h 127.0.0.1 -p 6379 -a &amp;quot;mypass&amp;quot; 4.Redis 字符串(String)12345设置指定 key 的值SET runoobkey redis获取指定 key 的">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-04T04:35:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="redis常用命令">
+<meta name="twitter:description" content="1.启动 redis  1redis-server /usr/local/etc/redis.conf 2.新建窗口1redis-cli 3.在远程服务上执行命令1$redis-cli -h 127.0.0.1 -p 6379 -a &amp;quot;mypass&amp;quot; 4.Redis 字符串(String)12345设置指定 key 的值SET runoobkey redis获取指定 key 的">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-redis常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/04/redis常用命令/" class="article-date">
+  <time datetime="2018-05-04T04:34:56.000Z" itemprop="datePublished">2018-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      redis常用命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.启动 redis </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure>
+<p>2.新建窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli</span><br></pre></td></tr></table></figure></p>
+<p>3.在远程服务上执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$redis-cli -h 127.0.0.1 -p 6379 -a &quot;mypass&quot;</span><br></pre></td></tr></table></figure></p>
+<p>4.Redis 字符串(String)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设置指定 key 的值</span><br><span class="line">SET runoobkey redis</span><br><span class="line"></span><br><span class="line">获取指定 key 的值。</span><br><span class="line">GET runoobkey</span><br></pre></td></tr></table></figure></p>
+<p>5.Redis hash 命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">同时将多个 field-value (域-值)对设置到哈希表 key 中。</span><br><span class="line">HMSET key field1 value1 [field2 value2 ]</span><br><span class="line"></span><br><span class="line">获取所有给定字段的值</span><br><span class="line">HMGET key field1 [field2]</span><br><span class="line"></span><br><span class="line">获取在哈希表中指定 key 的所有字段和值</span><br><span class="line">HGETALL key</span><br><span class="line"></span><br><span class="line">删除一个或多个哈希表字段</span><br><span class="line">HDEL key field1 [field2]</span><br></pre></td></tr></table></figure></p>
+<p>6.Redis 列表命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">将一个值插入到已存在的列表头部</span><br><span class="line">LPUSHX key value</span><br><span class="line"></span><br><span class="line">获取列表指定范围内的元素</span><br><span class="line">LRANGE key start stop</span><br><span class="line"></span><br><span class="line">通过索引获取列表中的元素</span><br><span class="line">LINDEX key index</span><br><span class="line"></span><br><span class="line">移除列表元素</span><br><span class="line">LREM key count value</span><br></pre></td></tr></table></figure></p>
+<p>7.Redis 的 Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。Redis 集合命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">向集合添加一个或多个成员</span><br><span class="line">SADD key member1 [member2]</span><br><span class="line"></span><br><span class="line">返回集合中的所有成员</span><br><span class="line">SMEMBERS key</span><br><span class="line"></span><br><span class="line">移除集合中一个或多个成员</span><br><span class="line">SREM key member1 [member2]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/04/redis常用命令/" data-id="cjgrguk8h0000vaoyicvhr4bt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/04/pgsql常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">pgsql常用命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/04/redis常用命令/">redis常用命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/04/pgsql常用命令/">pgsql常用命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/04/后端目录重写/">后端目录重写</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/01/前端总结/">前端总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/01/后端总结/">后端总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>后端目录重写 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.安装 irisi 1go get -u github.com/kataras/iris 2.在gopath下创建项目目录,并且创建 main.go 3.创建 config.json 配置数据库信息，服务监听端口等1234567891011121314151617181920&amp;#123;   &amp;quot;database&amp;quot;: &amp;#123;    &amp;quot;Dialect&amp;quot;:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后端目录重写">
+<meta property="og:url" content="http://yoursite.com/2018/05/04/后端目录重写/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.安装 irisi 1go get -u github.com/kataras/iris 2.在gopath下创建项目目录,并且创建 main.go 3.创建 config.json 配置数据库信息，服务监听端口等1234567891011121314151617181920&amp;#123;   &amp;quot;database&amp;quot;: &amp;#123;    &amp;quot;Dialect&amp;quot;:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-04T04:33:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="后端目录重写">
+<meta name="twitter:description" content="1.安装 irisi 1go get -u github.com/kataras/iris 2.在gopath下创建项目目录,并且创建 main.go 3.创建 config.json 配置数据库信息，服务监听端口等1234567891011121314151617181920&amp;#123;   &amp;quot;database&amp;quot;: &amp;#123;    &amp;quot;Dialect&amp;quot;:">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-后端目录重写" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/04/后端目录重写/" class="article-date">
+  <time datetime="2018-05-04T04:32:42.000Z" itemprop="datePublished">2018-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      后端目录重写
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.安装 irisi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u github.com/kataras/iris</span><br></pre></td></tr></table></figure>
+<p>2.在gopath下创建项目目录,并且创建 main.go</p>
+<p>3.创建 config.json 配置数据库信息，服务监听端口等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   &quot;database&quot;: &#123;</span><br><span class="line">    &quot;Dialect&quot;: &quot;postgresql&quot;,</span><br><span class="line">    &quot;Database&quot;: &quot;postgres&quot;, /*数据库名*/</span><br><span class="line">    &quot;User&quot;: &quot;postgres&quot;,</span><br><span class="line">    &quot;Password&quot;: &quot;123456&quot;,</span><br><span class="line">    &quot;Charset&quot;: &quot;utf8&quot;, /*字符集 utf8 */</span><br><span class="line">    &quot;Host&quot;: &quot;119.29.101.181&quot;, /*数据库地址*/</span><br><span class="line">    &quot;Port&quot;: 5432, /*数据库端口*/</span><br><span class="line">    &quot;MaxIdleConns&quot;: 5, /*空闲时最大的连接数*/</span><br><span class="line">    &quot;MaxOpenConns&quot;: 10, /*最大的连接数*/</span><br><span class="line">    &quot;SslMode&quot;: &quot;disable&quot;,</span><br><span class="line">    &quot;Prefix&quot;: &quot;seg_&quot;, /*数据表前缀*/</span><br><span class="line">    &quot;ShowSqlLog&quot;: true /*记录数据库日志*/</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;server&quot;: &#123;</span><br><span class="line">    &quot;Port&quot;: 3000, /*服务监听的端口*/</span><br><span class="line">    &quot;Env&quot;: &quot;dev&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.创建 config 文件夹，在里面创建 config.go 文件，定义结构并初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">package config</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;encoding/json&quot;</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;io/ioutil&quot;</span><br><span class="line">	&quot;GoProject-Standard/utils&quot;</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">	&quot;regexp&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">type dbConfig struct &#123;</span><br><span class="line">	Dialect      string</span><br><span class="line">	Database     string</span><br><span class="line">	User         string</span><br><span class="line">	Password     string</span><br><span class="line">	Charset      string</span><br><span class="line">	Host         string</span><br><span class="line">	Port         int</span><br><span class="line">	URL          string</span><br><span class="line">	MaxIdleConns int</span><br><span class="line">	MaxOpenConns int</span><br><span class="line">	SslMode      string</span><br><span class="line">	Prefix       string</span><br><span class="line">	ShowSqlLog   bool</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type serverConfig struct &#123;</span><br><span class="line">	Port int</span><br><span class="line">	Env  string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var jsonData map[string]interface&#123;&#125;</span><br><span class="line">var DBConfig dbConfig</span><br><span class="line">var ServerConfig serverConfig</span><br><span class="line"></span><br><span class="line">func initJSON() &#123;</span><br><span class="line">	bytes, err := ioutil.ReadFile(&quot;config.json&quot;)</span><br><span class="line">	if err != nil &#123;</span><br><span class="line">		fmt.Println(&quot;ReadFile: &quot; + err.Error())</span><br><span class="line">		os.Exit(-1)</span><br><span class="line">	&#125;</span><br><span class="line">	configStr := string(bytes[:])</span><br><span class="line">	reg := regexp.MustCompile(`/\*.*\*/`)</span><br><span class="line"></span><br><span class="line">	configStr = reg.ReplaceAllString(configStr, &quot;&quot;)</span><br><span class="line">	bytes = []byte(configStr)</span><br><span class="line"></span><br><span class="line">	if err := json.Unmarshal(bytes, &amp;jsonData); err != nil &#123;</span><br><span class="line">		fmt.Println(&quot;json parse fail&quot; + err.Error())</span><br><span class="line">		os.Exit(-1)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func initDB() &#123;</span><br><span class="line">	utils.SetObjectByJSON(&amp;DBConfig, jsonData[&quot;database&quot;].(map[string]interface&#123;&#125;))</span><br><span class="line">	url := fmt.Sprintf(&quot;host=%s port=%d user=%s password=%s dbname=%s sslmode=%s&quot;,</span><br><span class="line">		DBConfig.Host,</span><br><span class="line">		DBConfig.Port,</span><br><span class="line">		DBConfig.User,</span><br><span class="line">		DBConfig.Password,</span><br><span class="line">		DBConfig.Database,</span><br><span class="line">		DBConfig.SslMode,</span><br><span class="line">	)</span><br><span class="line">	DBConfig.URL = url</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func initServer() &#123;</span><br><span class="line">	utils.SetObjectByJSON(&amp;ServerConfig, jsonData[&quot;server&quot;].(map[string]interface&#123;&#125;))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func init() &#123;</span><br><span class="line">	initJSON()</span><br><span class="line">	initDB()</span><br><span class="line">	initServer()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>5.创建 utils 文件夹，在里面创建 utils.go为公共函数库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">package utils</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;reflect&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func setField(obj interface&#123;&#125;, name string, value interface&#123;&#125;) error &#123;</span><br><span class="line">	structData := reflect.ValueOf(obj).Elem()</span><br><span class="line">	fieldValue := structData.FieldByName(name)</span><br><span class="line"></span><br><span class="line">	if !fieldValue.IsValid() &#123;</span><br><span class="line">		fmt.Println(&quot;不存在该字段 &quot; + name)</span><br><span class="line">		return fmt.Errorf(&quot;不存在该字段 %s&quot; + name)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if !fieldValue.CanSet() &#123;</span><br><span class="line">		fmt.Println(&quot;Can not set &quot; + name)</span><br><span class="line">		return fmt.Errorf(&quot;Can not set %s&quot;, name)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fieldType := fieldValue.Type()</span><br><span class="line">	val := reflect.ValueOf(value)</span><br><span class="line">	valTypeStr := val.Type().String()</span><br><span class="line">	fieldTypeStr := fieldType.String()</span><br><span class="line">	if valTypeStr == &quot;float64&quot; &amp;&amp; fieldTypeStr == &quot;int&quot; &#123;</span><br><span class="line">		val = val.Convert(fieldType)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if fieldType != val.Type() &#123;</span><br><span class="line">		return fmt.Errorf(&quot;value type %s didn&apos;t match obj field type %s &quot;, valTypeStr, fieldTypeStr)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fieldValue.Set(val)</span><br><span class="line">	return nil</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func SetObjectByJSON(obj interface&#123;&#125;, data map[string]interface&#123;&#125;) error &#123;</span><br><span class="line">	for key, value := range data &#123;</span><br><span class="line">		if err := setField(obj, key, value); err != nil &#123;</span><br><span class="line">			fmt.Println(&quot;JSON转为对象失败.&quot;)</span><br><span class="line">			return err</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return nil</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>6.创建models文件夹，在里面创建global.go用于管理全局单例变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package model</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;github.com/xormplus/xorm&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//全局存储数据库引擎</span><br><span class="line">var DBEngine *xorm.Engine</span><br><span class="line"></span><br><span class="line">//存储一些环境常量</span><br><span class="line">const (</span><br><span class="line">	DevelopmentMode = &quot;dev&quot;</span><br><span class="line">	TestMode        = &quot;test&quot;</span><br><span class="line">	ProductionMode  = &quot;production&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>7.在 models 文件夹下创建 model1.go，定义数据表结构和表名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package model</span><br><span class="line"></span><br><span class="line">type Model1 struct &#123;</span><br><span class="line">	Id                int64  `xorm:&quot;index pk notnull autoincr &apos;id&apos;&quot;`</span><br><span class="line">	Uid               int64  `xorm:&quot;&apos;uid&apos;&quot;`</span><br><span class="line">	CourseName        string `xorm:&quot;unique notnull &apos;course_name&apos;&quot;`</span><br><span class="line">	CourseDescription string `xorm:&quot;&apos;course_description&apos;&quot;`</span><br><span class="line">	CourseTag         string `xorm:&quot;&apos;course_tag&apos;&quot;`</span><br><span class="line">	CourseImg         string `xorm:&quot;&apos;course_img&apos;&quot;`</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//定义表名</span><br><span class="line">func (model1 Model1) TableName() string &#123;</span><br><span class="line">	return &quot;seg_course&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>8.创建 controllers 文件夹，在里面再创建model1文件夹，在 model1文件下创建 hello.go 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package helloController</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;GoProject-Standard/models&quot;</span><br><span class="line">	&quot;github.com/kataras/iris&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func Hello(context iris.Context) &#123;</span><br><span class="line">	info := make([]model.Model1, 0)</span><br><span class="line">	err := model.DBEngine.Find(&amp;info)</span><br><span class="line">	if err == nil &#123;</span><br><span class="line">		context.JSON(iris.Map&#123;</span><br><span class="line">			&quot;data&quot;: info,</span><br><span class="line">		&#125;)</span><br><span class="line">		return</span><br><span class="line">	&#125;</span><br><span class="line">	context.JSON(iris.Map&#123;</span><br><span class="line">		&quot;data&quot;: &quot;data not found&quot;,</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>9.创建 route文件夹，在里面创建 route.go 文件，注册路由信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package roure</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	model1ctr &quot;GoProject-Standard/controllers/model1&quot;</span><br><span class="line"></span><br><span class="line">	&quot;github.com/kataras/iris&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//注册路由，如果失败返回错误</span><br><span class="line">func RegisterRoute(app *iris.Application) error &#123;</span><br><span class="line">	const (</span><br><span class="line">		model1Prefix = &quot;model1&quot;</span><br><span class="line">	)</span><br><span class="line"></span><br><span class="line">	model1Router := app.Party(model1Prefix)</span><br><span class="line">	model1Router.Get(&quot;/hello&quot;, model1ctr.Hello)</span><br><span class="line"></span><br><span class="line">	//404错误处理</span><br><span class="line">	app.OnErrorCode(iris.StatusNotFound, func(ctx iris.Context) &#123;</span><br><span class="line">		ctx.WriteString(&quot;404NotFound&quot;)</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	return nil</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>10.创建middleware文件夹，新建log文件夹，编辑log.go。进行日志读写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">package log</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">	&quot;strings&quot;</span><br><span class="line">	&quot;time&quot;</span><br><span class="line"></span><br><span class="line">	&quot;github.com/kataras/iris&quot;</span><br><span class="line">	&quot;github.com/kataras/iris/middleware/logger&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">const deleteFileOnExit = false</span><br><span class="line"></span><br><span class="line">func todayFileName() string &#123;</span><br><span class="line">	today := time.Now().Format(&quot;2006-01-02&quot;)</span><br><span class="line">	return &quot;logs/requestlog/&quot; + today + &quot;.txt&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func newLogFile() *os.File &#123;</span><br><span class="line">	filename := todayFileName()</span><br><span class="line">	f, err := os.OpenFile(filename, os.O_CREATE|os.O_RDONLY|os.O_APPEND, 0666)</span><br><span class="line">	if err != nil &#123;</span><br><span class="line">		panic(err)</span><br><span class="line">	&#125;</span><br><span class="line">	return f</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var excludeExtensions = [...]string&#123;</span><br><span class="line">	&quot;.js&quot;,</span><br><span class="line">	&quot;.css&quot;,</span><br><span class="line">	&quot;.jpg&quot;,</span><br><span class="line">	&quot;.png&quot;,</span><br><span class="line">	&quot;.ico&quot;,</span><br><span class="line">	&quot;.svg&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func NewRequestLogger() (h iris.Handler, close func() error) &#123;</span><br><span class="line">	close = func() error &#123; return nil &#125;</span><br><span class="line"></span><br><span class="line">	c := logger.Config&#123;</span><br><span class="line">		Status:  true,</span><br><span class="line">		IP:      true,</span><br><span class="line">		Method:  true,</span><br><span class="line">		Path:    true,</span><br><span class="line">		Columns: true,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	logFile := newLogFile()</span><br><span class="line">	close = func() error &#123;</span><br><span class="line">		err := logFile.Close()</span><br><span class="line">		if deleteFileOnExit &#123;</span><br><span class="line">			err = os.Remove(logFile.Name())</span><br><span class="line">		&#125;</span><br><span class="line">		return err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	c.LogFunc = func(now time.Time, latency time.Duration, status, ip, method, path string, message interface&#123;&#125;, headerMessage interface&#123;&#125;) &#123;</span><br><span class="line">		output := logger.Columnize(now.Format(&quot;2006-01-02 15:04:05&quot;), latency, status, ip, method, path, message, headerMessage)</span><br><span class="line">		logFile.Write([]byte(output))</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	c.AddSkipper(func(ctx iris.Context) bool &#123;</span><br><span class="line">		path := ctx.Path()</span><br><span class="line">		for _, ext := range excludeExtensions &#123;</span><br><span class="line">			if strings.HasSuffix(path, ext) &#123;</span><br><span class="line">				return true</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return false</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	h = logger.New(c)</span><br><span class="line">	return</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>11.创建log 文件夹，在里面再创建 requestlog 和 sqllog，将请求的 log 保存成 txt</p>
+<p>12.在 main.go 里面实现服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	config &quot;GoProject-Standard/config&quot;</span><br><span class="line">	model &quot;GoProject-Standard/models&quot;</span><br><span class="line">	route &quot;GoProject-Standard/route&quot;</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">	requestLogger &quot;segbackend/middleware/log&quot;</span><br><span class="line">	&quot;strconv&quot;</span><br><span class="line"></span><br><span class="line">	&quot;github.com/iris-contrib/middleware/cors&quot;</span><br><span class="line">	&quot;github.com/kataras/iris&quot;</span><br><span class="line">	&quot;github.com/kataras/iris/middleware/recover&quot;</span><br><span class="line">	_ &quot;github.com/lib/pq&quot;</span><br><span class="line">	&quot;github.com/xormplus/xorm&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func init() &#123;</span><br><span class="line">	engine, err := xorm.NewPostgreSQL(config.DBConfig.URL)</span><br><span class="line">	if err != nil &#123;</span><br><span class="line">		fmt.Println(&quot;打开数据库失败: &quot;, err.Error())</span><br><span class="line">		os.Exit(-1)</span><br><span class="line">	&#125;</span><br><span class="line">	engine.DB().SetMaxIdleConns(config.DBConfig.MaxIdleConns) //连接池空闲数</span><br><span class="line">	engine.DB().SetMaxOpenConns(config.DBConfig.MaxOpenConns) //最大打开连接数</span><br><span class="line">	engine.Sync2(new(model.Model1))</span><br><span class="line">	model.DBEngine = engine</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	app := iris.New()</span><br><span class="line">	app.Use(recover.New())</span><br><span class="line"></span><br><span class="line">	//配置请求日志服务</span><br><span class="line">	requestLogHandle, closeFileHandle := requestLogger.NewRequestLogger()</span><br><span class="line">	defer closeFileHandle()</span><br><span class="line">	app.Use(requestLogHandle)</span><br><span class="line"></span><br><span class="line">	//跨域处理</span><br><span class="line">	cor := cors.AllowAll()</span><br><span class="line">	app.Use(cor)</span><br><span class="line"></span><br><span class="line">	route.RegisterRoute(app)</span><br><span class="line"></span><br><span class="line">	address := iris.Addr(&quot;:&quot; + strconv.Itoa(config.ServerConfig.Port))</span><br><span class="line"></span><br><span class="line">	if config.ServerConfig.Env == model.DevelopmentMode &#123;</span><br><span class="line">		//不检查更新，设置字符集</span><br><span class="line">		app.Configure(iris.WithoutVersionChecker, iris.WithCharset(&quot;UTF-8&quot;))</span><br><span class="line">		app.Run(address)</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		app.Run(address)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/04/后端目录重写/" data-id="cjgrguk8v0001vaoy8uu2ebdn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/04/pgsql常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          pgsql常用命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/01/前端总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/04/redis常用命令/">redis常用命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/04/pgsql常用命令/">pgsql常用命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/04/后端目录重写/">后端目录重写</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/01/前端总结/">前端总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/01/后端总结/">后端总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
