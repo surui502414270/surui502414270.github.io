@@ -7,17 +7,17 @@
   
   <title>http 抓包实战读书笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“==中间人==”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给">
+  <meta name="description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“中间人”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给客户端发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http 抓包实战读书笔记">
 <meta property="og:url" content="http://yoursite.com/2019/09/01/http抓包实战读书笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“==中间人==”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给">
+<meta property="og:description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“中间人”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给客户端发">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-01T05:10:16.000Z">
+<meta property="og:updated_time" content="2019-09-01T05:16:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http 抓包实战读书笔记">
-<meta name="twitter:description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“==中间人==”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给">
+<meta name="twitter:description" content="Fiddler 抓包原理Fiddler 为什么能抓包？Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888  什么是代理服务器？Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“中间人”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端 对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给客户端发">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -88,17 +88,17 @@
       
         <h3 id="Fiddler-抓包原理"><a href="#Fiddler-抓包原理" class="headerlink" title="Fiddler 抓包原理"></a>Fiddler 抓包原理</h3><h4 id="Fiddler-为什么能抓包？"><a href="#Fiddler-为什么能抓包？" class="headerlink" title="Fiddler 为什么能抓包？"></a>Fiddler 为什么能抓包？</h4><p>Fiddler 本质上是一个 Web 代理服务器，它的默认工作端口是 8888</p>
 <hr>
-<h4 id="什么是代理服务器？"><a href="#什么是代理服务器？" class="headerlink" title="什么是代理服务器？"></a>什么是代理服务器？</h4><p>Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“==中间人==”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端</p>
+<h4 id="什么是代理服务器？"><a href="#什么是代理服务器？" class="headerlink" title="什么是代理服务器？"></a>什么是代理服务器？</h4><p>Web 代理服务器是网络的中间实体，位于 Web 客户端和 Web 服务器之间，扮演“<strong>中间人</strong>”的角色。http 的代理服务器既是 Web 服务器又是 Web 客户端</p>
 <p>对于 Web 客户端来说，代理扮演的是服务器，客户端给代理发请求，代理给客户端发回响应</p>
 <p>对于 Web 服务器来说，代理扮演的就是客户端，代理给服务器发请求，服务器给代理发回响应</p>
 <hr>
-<h4 id="Fiddler-的工作原理？"><a href="#Fiddler-的工作原理？" class="headerlink" title="Fiddler 的工作原理？"></a>Fiddler 的工作原理？</h4><p>在Fiddler启动的时候，会把 Internet 选项中的代理修改为 127.0.0.1，端口：8888。当 Fiddler 退出的时候，它会自动在 Internet 选项中取消代理。如果Fiddler 非正常退出，这是因为 Fiddler ==没有自动注销==，会造成网页无法访问。需重启 Fiddler</p>
+<h4 id="Fiddler-的工作原理？"><a href="#Fiddler-的工作原理？" class="headerlink" title="Fiddler 的工作原理？"></a>Fiddler 的工作原理？</h4><p>在Fiddler启动的时候，会把 Internet 选项中的代理修改为 127.0.0.1，端口：8888。当 Fiddler 退出的时候，它会自动在 Internet 选项中取消代理。如果Fiddler 非正常退出，这是因为 Fiddler <strong>没有自动注销</strong>，会造成网页无法访问。需重启 Fiddler</p>
 <hr>
-<h3 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h3><h4 id="常见的-http-方法有哪些？"><a href="#常见的-http-方法有哪些？" class="headerlink" title="常见的 http 方法有哪些？"></a>常见的 http 方法有哪些？</h4><p>1.==GET== 请求指定的页面信息并返回实体主体</p>
-<p>2.==HEAD== 类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头</p>
-<p>3.==POST== 向指定资源提交数据进行处理请求，数据被包含在请求体中，POST 请求可能会导致新的资源的建立或对已有资源的修改</p>
-<p>4.==PUT== 从客户端向服务器传送的数据取代指定文档的内容</p>
-<p>5.==DELETE== 请求服务器删除数据</p>
+<h3 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h3><h4 id="常见的-http-方法有哪些？"><a href="#常见的-http-方法有哪些？" class="headerlink" title="常见的 http 方法有哪些？"></a>常见的 http 方法有哪些？</h4><p>1.<strong>GET</strong> 请求指定的页面信息并返回实体主体</p>
+<p>2.HEAD 类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头</p>
+<p>3.<strong>POST</strong> 向指定资源提交数据进行处理请求，数据被包含在请求体中，POST 请求可能会导致新的资源的建立或对已有资源的修改</p>
+<p>4.PUT 从客户端向服务器传送的数据取代指定文档的内容</p>
+<p>5.DELETE 请求服务器删除数据</p>
 <hr>
 <h4 id="GET和-POST-的主要区别？"><a href="#GET和-POST-的主要区别？" class="headerlink" title="GET和 POST 的主要区别？"></a>GET和 POST 的主要区别？</h4><p>1.GET 提交的数据会放在 URL 之后，以问号分割 URL 和传输数据，参数之间以&amp;相连。POST 方法是把提交的数据放在 http 包中的 Body 里</p>
 <p>2.GET 提交的数据大小有限制（因为浏览器对 URL 的长度有限制），而 POST 方法提交的数据大小没有限制</p>
@@ -106,8 +106,8 @@
 <hr>
 <h4 id="http-状态码有哪些？分别是什么作用？"><a href="#http-状态码有哪些？分别是什么作用？" class="headerlink" title="http 状态码有哪些？分别是什么作用？"></a>http 状态码有哪些？分别是什么作用？</h4><p>1.200（OK）：请求成功</p>
 <p>2.204（No Content 没有内容）：返回的响应中只有一些 Header 和一个状态行，没有实体的主体内容。作用：（1）在不获取资源的情况下了解资源情况（比如判断其类型）（2）通过查看响应中的状态码看某个对象是否存在</p>
-<p>3.==206==（Partial Content 部分内容）：代表服务器已经成功处理了部分 GET 请求（只有发送 GET 方法的 http 请求，服务器才可能返回 206）。作用：（1）像迅雷这种下载工具都是使用 206 状态码来实现==断点续传== （2）将一个大文档分解为多个下载段同时下载，一些==流媒体技术==，比如在线视频可以边看边下载，就是使用 206 状态码来实现的</p>
-<p>4.==301==（Moved Permanently）:请求的页面已经永久性的转移到另一个地址。作用：（1）防止用户输错域名，比如 Google 担心用户输错域名，就把其类似的域名买下来，比如 go0gle，然后重定向到 google.com （2）网站更换域名，比如京东以前的域名是 360buy.com,现在的域名是 jd.com </p>
+<p>3.<strong>206</strong>（Partial Content 部分内容）：代表服务器已经成功处理了部分 GET 请求（只有发送 GET 方法的 http 请求，服务器才可能返回 206）。作用：（1）像迅雷这种下载工具都是使用 206 状态码来实现<strong>断点续传</strong> （2）将一个大文档分解为多个下载段同时下载，一些<strong>流媒体技术</strong>，比如在线视频可以边看边下载，就是使用 206 状态码来实现的</p>
+<p>4.<strong>301</strong>（Moved Permanently）:请求的页面已经永久性的转移到另一个地址。作用：（1）防止用户输错域名，比如 Google 担心用户输错域名，就把其类似的域名买下来，比如 go0gle，然后重定向到 google.com （2）网站更换域名，比如京东以前的域名是 360buy.com,现在的域名是 jd.com </p>
 <p>5.302（Found）：临时重定向。比如：在未登录的情况下，访问需要登录才能访问的页面，就会被服务器返回 302</p>
 <p>6.304（Not Modified）：上次的文档已经被缓存了，还可以继续使用</p>
 <p>7.400（Bad Request）：客户端请求有语法错误，如参数不正确</p>
@@ -117,25 +117,25 @@
 <p>11.500（Internal Server Error）：服务器内部错误，比如程序内部抛出异常、空指针等</p>
 <p>12.503（Server Unavailable）：服务器暂时不可用，由于服务器维护或过载，服务器当前无法处理请求</p>
 <hr>
-<h4 id="http-的-header-包含哪些关键字？"><a href="#http-的-header-包含哪些关键字？" class="headerlink" title="http 的 header 包含哪些关键字？"></a>http 的 header 包含哪些关键字？</h4><p>1.==Cookies==：它由key=value 的形式组成，浏览器把 Cookie 通过 http 请求中的“Cookie：header”发送给 Web 服务器，Web 服务器通过 http 响应中的“Set-Cookie：header”把 Cookie 发送给浏览器</p>
+<h4 id="http-的-header-包含哪些关键字？"><a href="#http-的-header-包含哪些关键字？" class="headerlink" title="http 的 header 包含哪些关键字？"></a>http 的 header 包含哪些关键字？</h4><p>1.<strong>Cookies</strong>：它由key=value 的形式组成，浏览器把 Cookie 通过 http 请求中的“Cookie：header”发送给 Web 服务器，Web 服务器通过 http 响应中的“Set-Cookie：header”把 Cookie 发送给浏览器</p>
 <p>2.Accept：表示客户端浏览器可以接受的媒体类型，例如 Accept：text/html 代表浏览器可以接受服务器返回 html</p>
 <p>3.Accept-Encoding：跟压缩有关，如 Accept-Encoding：gzip，deflate（告诉服务器，浏览器支持 zip 压缩）</p>
 <p>4.Accept-Language：浏览器声明自己接受的语言</p>
 <p>5.User-Agent:浏览器告诉服务器，客户端使用的操作系统及版本、CPU 类型、浏览器及版本、浏览器渲染引擎、浏览器语言、浏览器插件等</p>
-<p>6.==Referer==：让服务器判断来源页面，即用户是从哪个页面来的</p>
+<p>6.<strong>Referer</strong>：让服务器判断来源页面，即用户是从哪个页面来的</p>
 <p>7.Connection：从 http/1.1起，系统都默认开启了 Connection：Keep-Alive，保持连接特性。http 协议是基于 tcp 协议的，当一页网页完全打开后，客户端和服务器之间用于传输 http 数据的 tcp 连接不会关闭，如果客户端再次访问这个服务器上的页面，将会继续使用这一条已经建立的连接。Keep-Alive 不会永久保持连接，它有一个保持时间，可以在不同的服务器软件中设定这个时间</p>
-<p>8.==Host==:指定被请求的主机和端口号</p>
+<p>8.<strong>Host</strong>:指定被请求的主机和端口号</p>
 <hr>
-<h4 id="如何判断缓存新鲜度？"><a href="#如何判断缓存新鲜度？" class="headerlink" title="如何判断缓存新鲜度？"></a>如何判断缓存新鲜度？</h4><h4 id="Web-服务器通过以下-2-种方式来判断浏览器缓存是否最新"><a href="#Web-服务器通过以下-2-种方式来判断浏览器缓存是否最新" class="headerlink" title="Web 服务器通过以下 2 种方式来判断浏览器缓存是否最新"></a>Web 服务器通过以下 2 种方式来判断浏览器缓存是否最新</h4><p>1.通过缓存文件的==最后修改时间==来判断缓存的新鲜度。如果客户端想请求一个文档，它首先检查本地缓存，发现存在这个文档的缓存，获取缓存中文档的最后修改时间，通过“==If-Modified-Since==”发送 http 请求给服务器。服务器收到请求，将服务器的文档修改时间（Last-Modified）跟If-Modified-Since作比较，如果一样，说明缓存还是最新的，服务器将发送状态码 304 客户端。如果不一样，则服务器发送最新的文档给客户端</p>
-<p>2.==ETag==，是根据实体内容生成的一段 hash 字符串（类似于 MD5或者 SHA1 之后的结果），可以标志资源的状态，当资源发生改变的时候，ETag 也随之变化。使用 ETag 主要是为了解决一些 Last-Modified 无法解决的问题，如某些服务器不能精确得到文件的最后修改时间、文件的修改非常频繁，Last-Modified只能精确到秒、一些文件的最后修改时间改变但内容并未改变</p>
+<h4 id="如何判断缓存新鲜度？"><a href="#如何判断缓存新鲜度？" class="headerlink" title="如何判断缓存新鲜度？"></a>如何判断缓存新鲜度？</h4><h4 id="Web-服务器通过以下-2-种方式来判断浏览器缓存是否最新"><a href="#Web-服务器通过以下-2-种方式来判断浏览器缓存是否最新" class="headerlink" title="Web 服务器通过以下 2 种方式来判断浏览器缓存是否最新"></a>Web 服务器通过以下 2 种方式来判断浏览器缓存是否最新</h4><p>1.通过缓存文件的<strong>最后修改时间</strong>来判断缓存的新鲜度。如果客户端想请求一个文档，它首先检查本地缓存，发现存在这个文档的缓存，获取缓存中文档的最后修改时间，通过“<strong>If-Modified-Since</strong>”发送 http 请求给服务器。服务器收到请求，将服务器的文档修改时间（Last-Modified）跟If-Modified-Since作比较，如果一样，说明缓存还是最新的，服务器将发送状态码 304 客户端。如果不一样，则服务器发送最新的文档给客户端</p>
+<p>2.ETag，是根据实体内容生成的一段 hash 字符串（类似于 MD5或者 SHA1 之后的结果），可以标志资源的状态，当资源发生改变的时候，ETag 也随之变化。使用 ETag 主要是为了解决一些 Last-Modified 无法解决的问题，如某些服务器不能精确得到文件的最后修改时间、文件的修改非常频繁，Last-Modified只能精确到秒、一些文件的最后修改时间改变但内容并未改变</p>
 <hr>
-<h4 id="Cookie-分为哪两类？"><a href="#Cookie-分为哪两类？" class="headerlink" title="Cookie 分为哪两类？"></a>Cookie 分为哪两类？</h4><p>1.会话 Cookie：一种==临时的 cookie==,它记录了用户访问站点时的设置和偏好，关闭浏览器，会话 cookie 就被删除了</p>
-<p>2.==持久 Cookie== ：存储在硬盘上，不管浏览器退出或者计算机重启，持久 cookie 都继续存在，持久 cookie 有过期时间</p>
+<h4 id="Cookie-分为哪两类？"><a href="#Cookie-分为哪两类？" class="headerlink" title="Cookie 分为哪两类？"></a>Cookie 分为哪两类？</h4><p>1.会话 Cookie：一种<strong>临时的 cookie</strong>,它记录了用户访问站点时的设置和偏好，关闭浏览器，会话 cookie 就被删除了</p>
+<p>2.<strong>持久 Cookie</strong> ：存储在硬盘上，不管浏览器退出或者计算机重启，持久 cookie 都继续存在，持久 cookie 有过期时间</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/01/http抓包实战读书笔记/" data-id="ck00inw4g0000wooyalruecwe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/01/http抓包实战读书笔记/" data-id="ck00ivc28000102oy4zyg8g8y" class="article-share-link">Share</a>
       
       
     </footer>
